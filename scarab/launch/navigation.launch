@@ -84,7 +84,7 @@
     <!-- human friendly navigation -->
     <include file="$(find scarab)/launch/hfn.launch" >
       <arg name="agent"          value="$(arg agent)" />
-      <arg name="id"        default="0"/>
+<!--      <arg name="id"        default="0"/>-->
       <arg name="use_vicon"      value="$(arg use_vicon)" />
       <arg name="odom_topic"     value="$(arg odom_topic)" />
       <arg name="map_topic"      value="$(arg map_topic)" />
