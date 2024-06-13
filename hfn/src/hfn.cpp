@@ -365,7 +365,7 @@ HFNWrapper::HFNWrapper(const Params &params, HumanFriendlyNav *hfn) :
   pose_sub_ = nh_.subscribe("pose", 1, &HFNWrapper::onPose, this);
   map_sub_ = nh_.subscribe("map", 1, &HFNWrapper::onMap, this);
   laser_sub_ = nh_.subscribe("scan", 1, &HFNWrapper::onLaserScan, this);
-  odom_sub_ = nh_.subscribe("odom", 1, &HFNWrapper::onOdom, this);
+  odom_sub_ = nh_.subscribe("/vicon/scarab45/odom", 1, &HFNWrapper::onOdom, this);
 
   map_->setThresholds(params_.free_threshold, params_.occupied_threshold);
   map_->setMapFrameID(params_.map_frame);
