@@ -717,7 +717,7 @@ void HFNWrapper::onOdom(const nav_msgs::Odometry &odom) {
       cur_orient_.z() = odom.pose.pose.orientation.z;
       cur_yaw = tf::getYaw(odom.pose.pose.orientation);
   }
-  //ROS_INFO("init yaw = %f, cur_yaw = %f", init_yaw, cur_yaw);
+  ROS_INFO("current orientation is %f, %f, %f, %f", cur_orient_.w(), cur_orient_.x(), cur_orient_.y(), cur_orient_.z());
 }
 
 void HFNWrapper::setGoal(const vector<geometry_msgs::PoseStamped> &p) {
