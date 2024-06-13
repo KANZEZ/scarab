@@ -699,9 +699,9 @@ void HFNWrapper::onOdom(const nav_msgs::Odometry &odom) {
   cur_linear_vel_ = odom.twist.twist.linear.x;
   cur_pos_(0) = odom.pose.pose.position.x;
   cur_pos_(1) = odom.pose.pose.position.y;
-  if(!ifSetGoal){
-      return;
-  }
+//  if(!ifSetGoal){   ////// why ?
+//      return;
+//  }
   if(!ifHasInitOrien) {
       ifHasInitOrien = true;
       double x0 = odom.pose.pose.position.x;
