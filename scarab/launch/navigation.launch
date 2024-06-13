@@ -2,6 +2,7 @@
 
   <arg name="agent"         default="$(env AGENT)" />
   <arg name="use_vicon"     default="false"/>
+  <arg name="id"        default="0"/>       <!-- robot id : need to manually setup for now..........-->
 
   <arg name="odom_topic"    default="odom_vicon" if="$(arg use_vicon)"/>
   <arg name="odom_topic"    default="odom_laser" unless="$(arg use_vicon)"/>
@@ -64,6 +65,7 @@
       <arg name="ymin"        value="$(arg map_ymin)"/>
       <arg name="xmax"        value="$(arg map_xmax)"/>
       <arg name="ymax"        value="$(arg map_ymax)"/>
+
     </include>
 
   </group>
@@ -82,6 +84,7 @@
     <!-- human friendly navigation -->
     <include file="$(find scarab)/launch/hfn.launch" >
       <arg name="agent"          value="$(arg agent)" />
+      <arg name="id"        default="0"/>
       <arg name="use_vicon"      value="$(arg use_vicon)" />
       <arg name="odom_topic"     value="$(arg odom_topic)" />
       <arg name="map_topic"      value="$(arg map_topic)" />
@@ -90,6 +93,7 @@
       <arg name="pose_topic"     value="$(arg pose_topic)" />
       <arg name="map_frame"      value="$(arg map_frame)" />
       <arg name="base_frame"     value="$(arg base_frame)" />
+      <arg name="id"     value="$(arg id)" />
     </include>
 
     <!-- allows sending nav goals from rviz -->

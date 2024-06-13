@@ -2,6 +2,7 @@
 
   <arg name="agent" default="$(env AGENT)" />
   <arg name="use_vicon"     default="true" />
+  <arg name="id"        default="0"/>
 
 <!--  <arg name="odom_topic"    default="odom_vicon" if="$(arg use_vicon)"/>-->
   <arg name="odom_topic"    default="/vicon/$(arg agent)/odom" if="$(arg use_vicon)"/>
@@ -33,10 +34,12 @@
     <param name="max_acc"            value="0.3"/> <!--default 0.5m/s^2-->
     <param name="agent"              value="$(arg agent)"/>
 
+
+    <!-- previous method, include the agent_r is not working is since the params are not pass!!! -->
     <param name="goal_tolerance_ang" value="0.05"/> <!--default 2pi-->
     <param name="goal_tolerance"     value="0.05"/> <!--default .2m-->
     <param name="agent_r"            value="0.2"/>
-<!--    <param name="robot_id"            value="$(arg id)"/>-->
+    <param name="robot_id"            value="$(arg id)"/>
   </node>
 
 </launch>
