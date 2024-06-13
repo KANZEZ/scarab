@@ -197,6 +197,8 @@ private:
   boost::function<void(Status)> callback_;
   bool active_; // True if we're navigating to a goal
   bool turning_; // True if we've reached goal and are just turning
+  bool has_first_goal = false;
+  geometry_msgs::PoseStamped first_orient_;
   geometry_msgs::PoseStamped pose_;
   std::vector<geometry_msgs::PoseStamped> goals_;
   std::list<geometry_msgs::PoseStamped> pose_history_;

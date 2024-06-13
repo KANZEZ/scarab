@@ -92,15 +92,14 @@
       <param name="robot_radius"       value="0.3" />
       <param name="safety_margin"      value="0.1" />
       <param name="social_margin"      value="0.2" />
-      <param name="goal_tolerance_ang" value=".05"/> <!--default 2pi-->
-      <param name="goal_tolerance"     value=".05"/> <!--default .2m-->
+      <param name="goal_tolerance_ang" value="0.05"/> <!--default 2pi-->
+      <param name="goal_tolerance"     value="0.05"/> <!--default .2m-->
       <param name="traj_mode"          value="1"/> <!--default 0 is original , 1 is constant acc, 2 is min jerk-->
       <param name="max_speed"          value="0.22"/> <!--default 0.5m/s-->
       <param name="max_acc"            value="0.3"/> <!--default 0.5m/s^2-->
       <param name="agent"              value="$(arg agent)"/>
-      <param name="d_yaw"              value="0.02"/>
-      <param name="min_yaw"              value="0.001"/>
-      <param name="agent_r"            value="0.2"/>
+      <param name="d_yaw"              value="0.0"/>
+      <param name="min_yaw"              value="0.1"/>
       <param name="agent_r"            value="0.2"/>
       <param name="robot_id"            value="$(arg id)"/>
       

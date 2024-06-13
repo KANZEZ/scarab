@@ -148,7 +148,7 @@ Visualization Manager:
       Marker Topic: /scarab40/marker
       Name: HFN
       Namespaces:
-        /scarab40/hfn_navigation/polygon: true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/Marker
@@ -217,5 +217,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 2160
-  X: 415
-  Y: 703
+  X: 373
+  Y: 259
