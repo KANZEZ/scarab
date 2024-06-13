@@ -777,7 +777,8 @@ void HFNWrapper::setGoal(const vector<geometry_msgs::PoseStamped> &p) {
     double diff = angles::shortest_angular_distance(cur_yaw, init_yaw);
     ROS_INFO("DIFF = %f", diff);
     turning_ = 0.0 <= params_.goal_tol_ang && params_.goal_tol_ang <= M_PI && fabs(diff) > params_.goal_tol_ang + 0.05;
-
+    ROS_INFO("TURNING_ = %d", turning_);
+    ROS_INFO("TOL = %f", params_.goal_tol_ang);
 
   // Plan path from current location to the final location in goals_,
   // passing through all intermediate points in goals_
