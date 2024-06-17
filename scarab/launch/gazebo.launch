@@ -6,7 +6,7 @@
   <arg name="id1"       default="1"/>
   <arg name="spawn_x0" default="0.0"/>
   <arg name="spawn_y0" default="0.0"/>
-  <arg name="spawn_x1" default="2.0"/>
+  <arg name="spawn_x1" default="0.8"/>
   <arg name="spawn_y1" default="2.0"/>
 
   <arg name="rviz"        default="true"/>

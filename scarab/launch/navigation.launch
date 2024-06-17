@@ -1,8 +1,8 @@
 <launch>
 
   <arg name="agent"         default="$(env AGENT)" />
-  <arg name="use_vicon"     default="false"/>
-  <arg name="id"        default="0"/>       <!-- robot id : need to manually setup for now..........-->
+  <arg name="use_vicon"     default="true"/>
+  <arg name="id"        default="1"/>       <!-- robot id : need to manually setup for now..........-->
 
   <arg name="odom_topic"    default="odom_vicon" if="$(arg use_vicon)"/>
   <arg name="odom_topic"    default="odom_laser" unless="$(arg use_vicon)"/>
