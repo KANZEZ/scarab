@@ -485,7 +485,7 @@ void HFNWrapper::onPose(const geometry_msgs::PoseStamped &input) {
           if (ifMovingBack) {
               cmd.linear.x = -cmd.linear.x;
           }
-          cmd.angular.z = (init_yaw - cur_yaw < 0) ? params_.d_yaw : -params_.d_yaw;  // new added
+          cmd.angular.z = (init_yaw - cur_yaw > 0) ? params_.d_yaw : -params_.d_yaw;  // new added
       }
   }
 
@@ -615,7 +615,7 @@ void HFNWrapper::onLaserScan(const sensor_msgs::LaserScan &scan) {
               cmd.linear.x = -cmd.linear.x;
           }
 
-          cmd.angular.z = (init_yaw - cur_yaw < 0) ? params_.d_yaw : -params_.d_yaw;  // new added
+          cmd.angular.z = (init_yaw - cur_yaw > 0) ? params_.d_yaw : -params_.d_yaw;  // new added
 
           double cur_time = (ros::Time::now() - traj_start_time_).toSec();
           //std::cout << "the current time is " << cur_time << std::endl;
@@ -662,7 +662,7 @@ void HFNWrapper::onLaserScan(const sensor_msgs::LaserScan &scan) {
           if (ifMovingBack) {
               cmd.linear.x = -cmd.linear.x;
           }
-          cmd.angular.z = (init_yaw - cur_yaw < 0) ? params_.d_yaw : -params_.d_yaw;  // new added
+          cmd.angular.z = (init_yaw - cur_yaw > 0) ? params_.d_yaw : -params_.d_yaw;  // new added
       }
   }
   else{
