@@ -40,6 +40,7 @@
     <param name="goal_tolerance"     value="0.05"/> <!--default .2m-->
     <param name="agent_r"            value="0.2"/>
     <param name="robot_id"            value="$(arg id)"/>
+    <param name="d_yaw"              value="0.1"/>
   </node>
 
 </launch>
