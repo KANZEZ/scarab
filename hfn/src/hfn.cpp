@@ -494,12 +494,12 @@ void HFNWrapper::onPose(const geometry_msgs::PoseStamped &input) {
   //ROS_INFO("HFNWrapper: xy_ok %d", xy_ok);
   if (xy_ok &&
       (params_.goal_tol_ang >= M_PI ||
-      fabs(angles::shortest_angular_distance(tf::getYaw(pose_.pose.orientation),
+      fabs(angles::shortest_angular_distance(cur_yaw,
                                              init_yaw)) < params_.goal_tol_ang)) {
       ROS_INFO("HFNWrapper: turning_ %d", turning_);
       if(turning_) {
           stop();
-          ROS_WARN("FINISH TURNING");
+          ROS_WARN("FINISH TURNING[on pose]");
           cur_traj_.clear();
           active_ = true;
           turning_ = false;
