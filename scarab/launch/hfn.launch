@@ -41,6 +41,8 @@
     <param name="agent_r"            value="0.2"/>
     <param name="robot_id"            value="$(arg id)"/>
     <param name="d_yaw"              value="0.05"/>
+    <param name="length"              value="2.0"/>
+    <param name="width"              value="2.0"/>
   </node>
 
 </launch>

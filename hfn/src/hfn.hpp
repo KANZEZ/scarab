@@ -19,6 +19,8 @@
 #include <hfn/rosmap.hpp>
 #include <hfn/traj_gen.h>
 
+#include <hfn/defense_traj.h>
+
 namespace scarab {
 
 class HumanFriendlyNav {
@@ -124,6 +126,8 @@ public:
     double min_yaw;
     double agent_r;
     int robot_id;
+    double length_;
+    double width_;
 
   };
 
@@ -183,12 +187,15 @@ private:
   double cur_yaw;
   bool hasGoal = false;
 
+  // add for defense trajectory goal
+  std::unique_ptr<DefenseTraj> defense_traj_;
+
 
   void gen_traj(Eigen::Vector2f &xi, 
                 Eigen::Vector2f &vi, 
                 Eigen::Vector2f &ai);
   void pubGoal(Eigen::Vector2f &pos);
-  void move_back();
+  void MoveToTheNext();
 
   ros::NodeHandle nh_;
   ros::Publisher path_pub_, vis_pub_, vel_pub_, inflated_pub_, costmap_pub_, traj_pub_, poly_pub_;

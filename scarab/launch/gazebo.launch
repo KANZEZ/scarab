@@ -4,10 +4,10 @@
   <arg name="agent1"       default="scarab45"/>
   <arg name="id0"       default="0"/>
   <arg name="id1"       default="1"/>
-  <arg name="spawn_x0" default="0.0"/>
-  <arg name="spawn_y0" default="0.0"/>
-  <arg name="spawn_x1" default="0.8"/>
-  <arg name="spawn_y1" default="2.0"/>
+  <arg name="spawn_x0" default="-3.0"/>
+  <arg name="spawn_y0" default="0.1"/>
+  <arg name="spawn_x1" default="-3.0"/>
+  <arg name="spawn_y1" default="0.0"/>
 
   <arg name="rviz"        default="true"/>
 
@@ -53,7 +53,6 @@
     <arg name="id"   value="$(arg id0)"/>
     <arg name="spawn_x" value="$(arg spawn_x0)"/>
     <arg name="spawn_y" value="$(arg spawn_y0)"/>
-
   </include>
 
   <include file="$(find scarab)/launch/scarab_sim.launch">
